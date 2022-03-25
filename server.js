@@ -4,7 +4,10 @@ const express = require('express');
 const dotenv = require('dotenv');
 const {v4: uuidv4} = require("uuid")
 
-
+/*Conventions:
+1. CAT = Client Access Token
+2. RGAK = Randomly Generated Access Key
+*/
 
 
 //middlewares
@@ -14,11 +17,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 async function RegisterUser(user,pass){
+
+    //Lets create a Unique RGAK
     GeneratorVariable = uuidv4()
     ModifyGeneratorVariable = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPPXD"
-    RandomlyGeneratedAccessKey = ModifyGeneratorVariable //we can change this later if needed
+    RandomlyGeneratedAccessKey = ModifyGeneratorVariable 
+
     ClientAccessToken = uuidv4() //will generate a universally unique CAT
-    
+
     const data = await db.get(RandomlyGeneratedAccessKey).put({
         username: user,  //manually putting JSON key[username] and value[user]
         password: pass  //manually putting JSON key and value
