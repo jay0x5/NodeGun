@@ -22,6 +22,7 @@ async function RegisterUser(user,pass){
     GeneratorVariable = uuidv4()
     ModifyGeneratorVariable = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPPXD"
     RandomlyGeneratedAccessKey = ModifyGeneratorVariable 
+    // console.log(RandomlyGeneratedAccessKey)
 
     ClientAccessToken = uuidv4() //will generate a universally unique CAT
 
@@ -33,8 +34,9 @@ async function RegisterUser(user,pass){
        const noderesult = db.get(RandomlyGeneratedKey).once(v =>console.log(v.username));
 
        ~ TODO1: Write a code here with which we can store the console.log result from above line in a global variable so we can use it somewhere else too
-       ~ TODO3: Store CAT as a key and RGAK as its value inside of a "Parent-Document" [basically a big JSON document which keeps updating with more CAT keys and RGAK values as more and more user registers]
-       ~ TODO4: Store the AccessKey to ParentDocument as a env variable for server to access at times of login
+       ~ TODO2: Store CAT as a key and RGAK as its value inside of a "Parent-Document"
+       ~ TODO3: Create a function which will keep updating Parent-Document JSON FORMAT with more and more CAT and RGOK key-value pairs as more and more people register
+       
     */ 
 }
 
