@@ -15,8 +15,7 @@ ParentAccessKey = uuidv4()
 
 //STRUCTURE
 const data = await db.get(ParentAccessKey).put({
-    ExampleOfCAtKey:RGAK0,  //manually putting JSON key[CAT0] and value[RGAK0]
-      
+    ExampleOfCAtKey:RGAK0,  //manually putting JSON key[CAT0] and value[RGAK0] 
 });
 
 //ParentAccessKey will be stored in ENV variable
