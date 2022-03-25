@@ -1,3 +1,9 @@
+/*
+Author: Jay
+Developement Purpose: Research
+License: The Author of the script wont allow anyone to copy paste the exact same logic and script without the permission :D
+*/
+
 //requirments
 const db = require('gun')();
 const express = require('express');
