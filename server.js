@@ -24,14 +24,14 @@ async function updateParentDoc(u){
         u
     });
     console.log("User registered")
-    const noderesult = db.get('e6d8d5c1-7959-400c-9c4b-de4e1dc81625').once(v =>console.log(u));
+    const noderesult = db.get(process.env.PARENT_DOC_SECRET_KEY).once(v =>console.log(u));
 }
 
 //Function to Register a user
 async function RegisterUser(user,pass){
     //Lets create a Unique RGAK
     GeneratorVariable = uuidv4()
-    RandomlyGeneratedAccessKey = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPPXD" 
+    RandomlyGeneratedAccessKey = process.env.SECRET1 + GeneratorVariable + process.env.SECRET2 
     // console.log(RandomlyGeneratedAccessKey)
     ClientAccessToken = uuidv4() //will generate a universally unique CAT
 
@@ -43,7 +43,7 @@ async function RegisterUser(user,pass){
     // const noderesult = db.get(RandomlyGeneratedAccessKey).once(v =>console.log(v.username));
 
     //retrieve the current state of parentdoc
-    const modres = db.get('e6d8d5c1-7959-400c-9c4b-de4e1dc81625').once(v =>{
+    const modres = db.get(process.env.PARENT_DOC_SECRET_KEY).once(v =>{
 
         //assign it to a variable u and pass it to update function
         var u = v
