@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 async function RegisterUser(user,pass){
     GeneratorVariable = uuidv4()
-    ModifyGeneratorVariable = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPP"
+    ModifyGeneratorVariable = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPPXD"
     RandomlyGeneratedAccessKey = "Paraverse2022$" //we will change this later to some result which is generated more uniquely everytime since we will need it unique for every user
     ClientAccessToken = uuidv4() //will generate a universally unique CAT
     const data = await db.get(RandomlyGeneratedAccessKey).put({
