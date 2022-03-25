@@ -1,8 +1,9 @@
 /*
 Author: Jay
 Developement Purpose: Research
-License: The Author of the script wont allow anyone to copy paste the exact same logic and script without the permission :D
 */
+//Thanks to Mark Nadal for making GunDb open source :))
+
 
 //requirments
 const db = require('gun')();
