@@ -33,7 +33,7 @@ async function RegisterUser(user,pass){
        const noderesult = db.get(RandomlyGeneratedAccessKey).once(v =>console.log(v.username));
 
        ~ TODO1: Write a code here with which we can store the console.log result from above line in a global variable so we can use it somewhere else too
-       ~ [IMP]TODO2: Store CAT AND RGAK as a nested JSON? So whenever a certain CAT value is matched, server should be able to fetch the corresponding RGAK value inside of a "Parent-Document"
+       ~ TODO2: Store CAT AND RGAK as key and value pair So whenever a certain CAT key value is matched, server should be able to fetch the corresponding RGAK value inside of a "Parent-Document"
        ~ TODO3: Create a function which will keep updating Parent-Document JSON FORMAT with more and more CAT and RGOK key-value pairs as more and more people register
        
     */ 

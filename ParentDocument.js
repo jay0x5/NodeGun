@@ -8,18 +8,14 @@ const {v4: uuidv4} = require("uuid")
 2. RGAK = Randomly Generated Access Key
 */
 
-//LETS DISCUSS THE STRUCTURE OF PARENTDOCUMENT SO WE CAN DO EASY SEARCHES AND FETCHING?
 
 
-
-
-const CAT0 = "Example-Of-CAT"
 const RGAK0 = "Sub-Example-Of-RGAK"
 ParentAccessKey = uuidv4()
 
 //STRUCTURE
 const data = await db.get(ParentAccessKey).put({
-    CAT0:RGAK0,  //manually putting JSON key[CAT0] and value[RGAK0]
+    ExampleOfCAtKey:RGAK0,  //manually putting JSON key[CAT0] and value[RGAK0]
       
 });
 
