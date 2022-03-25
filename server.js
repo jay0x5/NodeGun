@@ -7,7 +7,6 @@ const {v4: uuidv4} = require("uuid")
 /*Conventions:
 1. CAT = Client Access Token
 2. RGAK = Randomly Generated Access Key
-3. VAL = Just object name to hold CAT and RGAK
 */
 
 
