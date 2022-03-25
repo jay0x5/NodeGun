@@ -54,11 +54,10 @@ async function RegisterUser(user,pass){
     });
     
 
-    /*To access a specific content from the key RandomlyGeneratedAccessKey:
-       const noderesult = db.get(RandomlyGeneratedAccessKey).once(v =>console.log(v.username));
+    /*
 
        ~ TODO2: Whenever a certain CAT key value is matched, server should be able to fetch the corresponding RGAK value inside of a "Parent-Document"
-      
+       ~ TODO3: Clean the code a bit
        
     */ 
 }
