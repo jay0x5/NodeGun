@@ -20,8 +20,7 @@ async function RegisterUser(user,pass){
 
     //Lets create a Unique RGAK
     GeneratorVariable = uuidv4()
-    ModifyGeneratorVariable = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPPXD"
-    RandomlyGeneratedAccessKey = ModifyGeneratorVariable 
+    RandomlyGeneratedAccessKey = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPPXD" 
     // console.log(RandomlyGeneratedAccessKey)
 
     ClientAccessToken = uuidv4() //will generate a universally unique CAT
