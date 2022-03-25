@@ -27,7 +27,7 @@ async function updateParentDoc(u){
     const noderesult = db.get('e6d8d5c1-7959-400c-9c4b-de4e1dc81625').once(v =>console.log(u));
 }
 
-//Function to update Register a user
+//Function to Register a user
 async function RegisterUser(user,pass){
     //Lets create a Unique RGAK
     GeneratorVariable = uuidv4()
