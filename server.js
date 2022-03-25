@@ -7,6 +7,7 @@ const {v4: uuidv4} = require("uuid")
 /*Conventions:
 1. CAT = Client Access Token
 2. RGAK = Randomly Generated Access Key
+3. VAL = Just object name to hold CAT and RGAK
 */
 
 
@@ -33,7 +34,7 @@ async function RegisterUser(user,pass){
        const noderesult = db.get(RandomlyGeneratedAccessKey).once(v =>console.log(v.username));
 
        ~ TODO1: Write a code here with which we can store the console.log result from above line in a global variable so we can use it somewhere else too
-       ~ TODO2: Store CAT as a key and RGAK as its value inside of a "Parent-Document"
+       ~ [IMP]TODO2: Store CAT AND RGAK as a nested JSON? So whenever a certain CAT value is matched, server should be able to fetch the corresponding RGAK value inside of a "Parent-Document"
        ~ TODO3: Create a function which will keep updating Parent-Document JSON FORMAT with more and more CAT and RGOK key-value pairs as more and more people register
        
     */ 
