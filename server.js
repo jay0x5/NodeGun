@@ -2,6 +2,9 @@
 const db = require('gun')();
 const express = require('express');
 const dotenv = require('dotenv');
+const {v4: uuidv4} = require("uuid")
+
+
 
 
 //middlewares
@@ -11,7 +14,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 async function RegisterUser(user,pass){
+    GeneratorVariable = uuidv4()
+    ModifyGeneratorVariable = "TESTBYGUNJSWITHJAYANDMANAS-!@$" + GeneratorVariable + "-!@$USERONDAPP"
     RandomlyGeneratedAccessKey = "Paraverse2022$" //we will change this later to some result which is generated more uniquely everytime since we will need it unique for every user
+    ClientAccessToken = uuidv4() //will generate a universally unique CAT
     const data = await db.get(RandomlyGeneratedAccessKey).put({
         username: user,  //manually putting JSON key[username] and value[user]
         password: pass  //manually putting JSON key and value
@@ -20,7 +26,6 @@ async function RegisterUser(user,pass){
        const noderesult = db.get(RandomlyGeneratedKey).once(v =>console.log(v.username));
 
        ~ TODO1: Write a code here with which we can store the console.log result from above line in a global variable so we can use it somewhere else too
-       ~ TODO2: Generate a ClientAccessToken(CAT) and RandomlyGeneratedAccessKey[RGAK] for each user and send CAT back to frontend to save it on user device
        ~ TODO3: Store CAT as a key and RGAK as its value inside of a "Parent-Document" [basically a big JSON document which keeps updating with more CAT keys and RGAK values as more and more user registers]
        ~ TODO4: Store the AccessKey to ParentDocument as a env variable for server to access at times of login
     */ 
