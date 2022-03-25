@@ -41,7 +41,7 @@ async function RegisterUser(user,pass){
 //app waiting for frontend to post request user credentials
 app.post('/register',async(req,res)=>{
     res.send("register part")
-    const {user,pass} = req.body //gives username to user and password to pass
+    const {user,pass} = req.body //gives username to constructors user and password to pass
     // console.log(user);
     // console.log(pass);
     RegisterUser(user,pass)  // passed user credentials to the function to process the data and put it in GunJS Network                    
