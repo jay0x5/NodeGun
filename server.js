@@ -29,8 +29,8 @@ async function RegisterUser(user,pass){
         username: user,  //manually putting JSON key[username] and value[user]
         password: pass  //manually putting JSON key and value
     });
-    /*To access a specific content from the key RandomlyGeneratedKey:
-       const noderesult = db.get(RandomlyGeneratedKey).once(v =>console.log(v.username));
+    /*To access a specific content from the key RandomlyGeneratedAccessKey:
+       const noderesult = db.get(RandomlyGeneratedAccessKey).once(v =>console.log(v.username));
 
        ~ TODO1: Write a code here with which we can store the console.log result from above line in a global variable so we can use it somewhere else too
        ~ TODO2: Store CAT as a key and RGAK as its value inside of a "Parent-Document"
