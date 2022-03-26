@@ -74,7 +74,7 @@ async function RegisterUser(user,pass){
 
     /*
 
-       ~ TODO2: Whenever a certain CAT key value is matched, server should be able to fetch the corresponding RGAK value inside of a "Parent-Document"
+       ~ TODO2: try chaining the node to store relations based on specific users
        ~ TODO3: Clean the code a bit
        ~ TODO4: fix unity frontend for testing purposes
        
