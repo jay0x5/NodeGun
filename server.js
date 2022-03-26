@@ -94,7 +94,7 @@ app.post('/register',async(req,res)=>{
 //app waiting for frontend to post request CAT Token from user for login purpose
 app.post('/login', async(req,res)=>{
     console.log(req.token)
-    LoginUser('75b7df53-dff5-4fa7-862d-692176ec1de2')
+    LoginUser(process.env.TESTACCESSKEY)
 })
 
 
