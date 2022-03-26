@@ -3,6 +3,7 @@ Author: Jay
 Developement Purpose: Research
 */
 //Thanks to Mark Nadal for making GunDb open source :))
+//Note: SEA Authentication is not used, We are using GunDb just as a decentralized file storage
 
 
 //requirments
