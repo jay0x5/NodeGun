@@ -10,7 +10,8 @@ const db = require('gun')();
 const express = require('express');
 const dotenv = require('dotenv');
 const {v4: uuidv4} = require("uuid")
-let d
+
+
 /*Conventions:
 1. CAT = Client Access Token
 2. RGAK = Randomly Generated Access Key
@@ -22,6 +23,16 @@ app = express();
 dotenv.config({path: './.env'})
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
+
+//Function to login user
+async function LoginUser(CatTokenValue){
+    const ParentDocResult = db.get(process.env.PARENT_DOC_SECRET_KEY).once(v =>{
+        data = v[CatTokenValue]
+        console.log("CAT value: " + data)
+
+    
+    });
+}
 
 //Function to update ParentDoc everytime a user is created
 async function updateParentDoc(u){
@@ -65,20 +76,26 @@ async function RegisterUser(user,pass){
 
        ~ TODO2: Whenever a certain CAT key value is matched, server should be able to fetch the corresponding RGAK value inside of a "Parent-Document"
        ~ TODO3: Clean the code a bit
+       ~ TODO4: fix unity frontend for testing purposes
        
     */ 
 }
 
 
-//app waiting for frontend to post request user credentials
+//app waiting for frontend to post request user credentials via the register route
 app.post('/register',async(req,res)=>{
-    res.send("register part")
+    res.send("register-part")
     const {user,pass} = req.body //gives username to constructor user and password to constructor pass
     // console.log(user);
     // console.log(pass);
     RegisterUser(user,pass)  // passed user credentials to the function to process the data and put it in GunJS Network                    
  })
 
+//app waiting for frontend to post request CAT Token from user for login purpose
+app.post('/login', async(req,res)=>{
+    console.log(req.token)
+    LoginUser('75b7df53-dff5-4fa7-862d-692176ec1de2')
+})
 
 
 //app listening to port
