@@ -18,7 +18,6 @@ const {v4: uuidv4} = require("uuid")
 */
 
 
-//middlewares
 app = express();
 dotenv.config({path: './.env'})
 app.use(express.json())
