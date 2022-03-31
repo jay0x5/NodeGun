@@ -42,7 +42,7 @@ async function updateParentDoc(u){
         u
     });
     console.log("User registered")
-    const noderesult = db.get(process.env.PARENT_DOC_SECRET_KEY).once(v =>console.log(u));
+    const noderesult = db.get(process.env.PARENT_DOC_SECRET_KEY).once(v =>console.log(v));
 }
 
 //Function to Register a user
@@ -85,10 +85,10 @@ async function RegisterUser(user,pass){
 //app waiting for frontend to post request user credentials via the register route
 app.post('/register',async(req,res)=>{
     res.send("register-part")
-    const {user,pass} = req.body //gives username to constructor user and password to constructor pass
-    // console.log(user);
-    // console.log(pass);
-    RegisterUser(user,pass)  // passed user credentials to the function to process the data and put it in GunJS Network                    
+    const {mail,username,password} = req.body //gives username to constructor user and password to constructor pass
+    console.log(username);
+    console.log(password);
+    // RegisterUser(user,pass)  // passed user credentials to the function to process the data and put it in GunJS Network                    
  })
 
 //app waiting for frontend to post request CAT Token from user for login purpose

@@ -10,16 +10,16 @@ const {v4: uuidv4} = require("uuid")
 
 
 
-const RGAK0 = "Sub-Example-Of-RGAK"
+const RGAK0 = " U2FsdGVkX1/h5D6v2armlChrytIUU99hKzrksr8ZIGoX0C9vvlybUKSG8RZK15QRUaADqBm/e/SB+36ifZm6q605H696jXkO+PdHP14bym1iuKyk863mi0MYKT8iSPEz"
 // ParentAccessKey = uuidv4()
 // console.log(ParentAccessKey)
 
 //STRUCTURE
-const data =  db.get(ParentAccessKey).put({
+const data =  db.get("wssw3").put({
     ExampleOfCatKey:RGAK0, //manually putting JSON key[CAT0] and value[RGAK0] 
       
 });
-const noderesult = db.get(ParentAccessKey).once(v =>console.log(v.ExampleOfCatKey));
+const noderesult = db.get("wssw3").once(v =>console.log(v.ExampleOfCatKey));
 //ParentAccessKey will be stored in ENV variable
 
 // e6d8d5c1-7959-400c-9c4b-de4e1dc81625
